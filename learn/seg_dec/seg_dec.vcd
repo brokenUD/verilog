@@ -1,0 +1,74 @@
+$date
+	Fri Nov 11 20:23:42 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	100ps
+$end
+$scope module seg_dec_tb $end
+$scope module seg_dec_tb $end
+$var wire 4 ! num [3:0] $end
+$var reg 7 " a_g [6:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1111110 "
+b0 !
+$end
+#1000
+b110000 "
+b1 !
+#2000
+b1101101 "
+b10 !
+#3000
+b1111001 "
+b11 !
+#4000
+b110010 "
+b100 !
+#5000
+b1011011 "
+b101 !
+#6000
+b1011111 "
+b110 !
+#7000
+b1110000 "
+b111 !
+#8000
+b1111111 "
+b1000 !
+#9000
+b1111011 "
+b1001 !
+#10000
+b1 "
+b1010 !
+#11000
+b1011 !
+#12000
+b1100 !
+#13000
+b1101 !
+#14000
+b1110 !
+#15000
+b1111 !
+#16000
+b1111110 "
+b0 !
+#17000
+b110000 "
+b1 !
+#18000
+b1101101 "
+b10 !
+#19000
+b1111001 "
+b11 !
+#20000

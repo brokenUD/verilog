@@ -1,0 +1,62 @@
+#! /opt/homebrew/Cellar/icarus-verilog/11.0/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 11;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/11.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/11.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/11.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/11.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/11.0/lib/ivl/va_math.vpi";
+S_0x12c7041e0 .scope module, "nand_gate_tb" "nand_gate_tb" 2 2;
+ .timescale 0 0;
+v0x12c714860_0 .var "aa", 0 0;
+v0x12c714900_0 .var "bb", 0 0;
+v0x12c7149b0_0 .net "yy", 0 0, L_0x12c714bb0;  1 drivers
+S_0x12c704360 .scope module, "nand_gate_tb" "nand_gate" 2 2, 3 2 0, S_0x12c7041e0;
+ .timescale -9 -11;
+    .port_info 0 /INPUT 1 "A";
+    .port_info 1 /INPUT 1 "B";
+    .port_info 2 /OUTPUT 1 "Y";
+L_0x12c714a80 .functor AND 1, v0x12c714860_0, v0x12c714900_0, C4<1>, C4<1>;
+L_0x12c714bb0 .functor NOT 1, L_0x12c714a80, C4<0>, C4<0>, C4<0>;
+v0x12c704570_0 .net "A", 0 0, v0x12c714860_0;  1 drivers
+v0x12c714610_0 .net "B", 0 0, v0x12c714900_0;  1 drivers
+v0x12c7146b0_0 .net "Y", 0 0, L_0x12c714bb0;  alias, 1 drivers
+v0x12c714760_0 .net *"_ivl_0", 0 0, L_0x12c714a80;  1 drivers
+    .scope S_0x12c7041e0;
+T_0 ;
+    %vpi_call 2 5 "$dumpfile", "learn/nand_gate/nand_gate.vcd" {0 0 0};
+    %vpi_call 2 6 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x12c704360 {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_0x12c7041e0;
+T_1 ;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0x12c714860_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0x12c714900_0, 0;
+    %delay 3567587328, 232;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0x12c714860_0, 0;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v0x12c714900_0, 0;
+    %delay 3567587328, 232;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v0x12c714860_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0x12c714900_0, 0;
+    %delay 3567587328, 232;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v0x12c714860_0, 0;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v0x12c714900_0, 0;
+    %delay 3567587328, 232;
+    %vpi_call 2 15 "$stop" {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "learn/nand_gate/nand_gate_tb.v";
+    "learn/nand_gate/nand_gate.v";
